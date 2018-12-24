@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block Bookmarks %}
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="{% url 'general_settings' %}">Настройки</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Не работает</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Не работает1</a>
+                <a class="dropdown-item" href="#">Не работает2</a>
+                <a class="dropdown-item" href="#">Не работает3</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Не работает4</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Не работает</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Не работает</a>
+        </li>
+    </ul>
+
+{% endblock %}

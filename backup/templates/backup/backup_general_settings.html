@@ -1,0 +1,51 @@
+{% extends 'backup/base_backup.html' %}
+
+
+{% block Title %}
+    <div class="mb-5">
+        ntrcn ntrcn
+    </div>
+{% endblock %}
+
+
+{% block Context_up %}
+    <div class="d-flex p-2 bd-highlight">
+        <div class="select2-container">
+            <div class="row justify-content-md-center">
+                <div class="col-md-auto">
+                    <div class="col-30">
+
+                        <form action="{% url 'general_settings' %}" method="post">
+                            {% csrf_token %}
+                            <li class="list-group-item">
+                                <p>Общие</p>
+                                {% for form in form %}
+                                    {{ form.label }}
+                                    {{ form }}
+                                {% endfor %}
+                            </li>
+                            <li class="list-group-item">
+                                <p>Клиент</p>
+                                {% for form in client_form %}
+                                    {{ form.label }}
+                                    {{ form }}
+                                {% endfor %}
+                            </li>
+                            <li class="list-group-item">
+                                <p>Хранилище</p>
+                                {% for form in storage_form %}
+                                    {{ form.label }}
+                                    {{ form }}
+                                {% endfor %}
+                            </li>
+                            <button  type="submit" class="btn btn-primary btn-md-50 ">Сохранить</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
